@@ -4,7 +4,7 @@ set -e
 
 echo "Setting up nix..."
 export NIX_INSTALLER_YES=true
-$(sh <(curl -L https://nixos.org/nix/install) --daemon)
+curl -L https://nixos.org/nix/install --daemon
 
 echo "Done installing nix."
 nix-shell -p nix-info --run "nix-info -m"
